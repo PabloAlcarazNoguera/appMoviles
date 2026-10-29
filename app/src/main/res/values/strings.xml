@@ -3,4 +3,6 @@
     <string name="descripcion">Peluqueria y barberia para todos los publicos</string>
     <string name="Inicio">Inicio de sesion</string>
     <string name="Registro">Resgistrarse</string>
+    <string name="Olvide">Olvidaste tu contraseña?</string>
+    <string name="desc_olvide">Te llegara un email al correo electronico asociado</string>
 </resources>

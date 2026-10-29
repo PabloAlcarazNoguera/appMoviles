@@ -38,63 +38,79 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titulo_inicio_sesion">
 
-    <!-- Campo de entrada para el Email -->
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:hint="Correo Electrónico"
-        android:inputType="textEmailAddress"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintTop_toTopOf="parent"
+        <!-- Campo de entrada para el Email -->
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Correo Electrónico"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/darker_gray"
+            app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/botonIniciarSesion"/>
+
+        <Button
+            android:id="@+id/botonIniciarSesion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textSize="18sp"
+            android:backgroundTint="#F8C60B"
+            android:text="@string/Inicio"
+            android:textColor="@android:color/black"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/botonRecuperarContrasena"/> <!-- Se ajusta la restricción inferior -->
+
+        <!-- Botón estilizado como texto para recuperar contraseña -->
+        <Button
+            android:id="@+id/botonRecuperarContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="¿Olvidaste tu contraseña?"
+            android:textColor="#007BFF"
+        android:textSize="16sp"
+        android:background="?attr/selectableItemBackground"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/botonIniciarSesion"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/editTextPassword"
-        app:layout_constraintVertical_chainStyle="packed"/>
+        app:layout_constraintBottom_toTopOf="@+id/textViewRegistrarse"/> <!-- Se ajusta la restricción inferior -->
 
-
-    <EditText
-        android:id="@+id/editTextPassword"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:hint="Contraseña"
-        android:inputType="textPassword"
-        android:textColor="@android:color/black"
-        android:textColorHint="@android:color/darker_gray"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
+        <TextView
+            android:id="@+id/textViewRegistrarse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="¿No tienes cuenta? Regístrate"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/botonRecuperarContrasena"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/botonIniciarSesion"/>
-
-    <Button
-        android:id="@+id/botonIniciarSesion"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-    android:textSize="18sp"
-    android:backgroundTint="#F8C60B"
-        android:text="@string/Inicio"
-    android:textColor="@android:color/black"
-    app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintBottom_toBottomOf="parent"/>
-
-
-
-
-<TextView
-android:id="@+id/textViewRegistrarse"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginTop="24dp"
-android:text="¿No tienes cuenta? Regístrate"
-android:textColor="#FFFFFF"
-android:textSize="16sp"
-app:layout_constraintTop_toBottomOf="@+id/contenedor_login"
-app:layout_constraintStart_toStartOf="parent"
-app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"/> <!-- Mantenemos esta restricción para el último elemento -->
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
